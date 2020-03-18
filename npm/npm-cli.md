@@ -28,7 +28,9 @@ v1.0.5
 
 ## 后言：
 1. npm version prerelease --preid=alpha中的preid顾名思义是前置标识符的意思，可以不传，alpha.0就变成了0；也可以传beta或rc等
-2. 如果在git项目中，运行npm version xxx命令会自动生成一个commit和tag，可以通过npm --no-git-tag-version version来禁用这个功能
+2. 如果在git项目中，运行npm version xxx命令会自动生成一个commit和tag，所以在推送代码时除了git push之外，还可以运行git push --tags将自动生成的tag进行推送。如果不需要自动生成，可以通过npm --no-git-tag-version version来禁用这个功能
+
+以下引用来自npm cli官网
 > If run in a git repo, it will also create a version commit and tag. This behavior is controlled by git-tag-version (see below), and can be disabled on the command line by running npm --no-git-tag-version version
 
 更多详细解释请参考以下文档

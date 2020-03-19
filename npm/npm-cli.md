@@ -1,12 +1,12 @@
-# 如何发布alpha(α)预览版/内部测试版
+# 如何生成alpha(α)预览版/内部测试版
 ## 什么时候需要：
 当刚开发完成需要提测时，一般发布alpha版本
 ## 怎么发：
-场景一：在非alpha版本上第一次发alpha版本时，运行npm version prerelease --preid=alpha
+场景一：在非alpha版本上第一次生成alpha版本时，运行npm version prerelease --preid=alpha
 
-场景二：在alpha版本上发布可以省略--preid=alpha，直接运行npm version prerelease即可
+场景二：在alpha版本上生成可以省略--preid=alpha，直接运行npm version prerelease即可
 
-**以上就是如何发布alpha(α)预览版的命令了，下面是一些示例**
+**以上就是如何生成alpha(α)预览版的命令了，下面是一些示例**
 ## 示例：
 示例一：第一次运行npm version prerelease --preid=alpha时，会将版本号的修订号patch+1，同时prerelease号设置为alpha.0；
 
@@ -27,6 +27,27 @@ v1.0.5-alpha.1
 // 示例三 去掉prerelease
 $ npm version patch
 v1.0.5
+```
+
+## 生成版本后，如果想要发布：
+1. 首先要到npm官网：[https://www.npmjs.com/](https://www.npmjs.com/)注册一个账号（记得到邮箱激活）
+
+2. 然后在命令行输入：
+```js
+$ npm adduser 你的账号
+```
+接着会让你输入密码
+
+3. 再运行上面发alpha版本的命令
+```
+$ npm version prerelease --preid=alpha
+  或
+  npm version prerelease
+```
+
+4. 最后运行
+```js
+$ npm publish
 ```
 
 ## 后言：

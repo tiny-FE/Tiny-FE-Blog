@@ -2,26 +2,27 @@
 ## 什么时候需要：
 当刚开发完成需要提测时，一般发布alpha版本
 ## 怎么发：
-在非alpha版本上第一次发alpha版本时，运行npm version prerelease --preid=alpha。
+场景一：在非alpha版本上第一次发alpha版本时，运行npm version prerelease --preid=alpha。
 
-在alpha版本上发布可以省略--preid=alpha，直接发布npm version prerelease即可
+场景二：在alpha版本上发布可以省略--preid=alpha，直接发布npm version prerelease即可
 ## 示例：
-步骤一：第一次运行npm version prerelease --preid=alpha时，会将版本号的修订号patch+1，同时prerelease号设置为alpha.0；
+示例一：第一次运行npm version prerelease --preid=alpha时，会将版本号的修订号patch+1，同时prerelease号设置为alpha.0；
 
-步骤二：再次运行时，则将预发布号prerelease+1；
+示例二：再次运行时，则将预发布号prerelease+1；
 
-步骤三：再运行npm version patch时，patch号不变，去掉prerelease号
+示例三：再运行npm version patch时，patch号不变，去掉prerelease号
 ```js
+// $后面的命令表示输入命令(不用输入$)，$下一行表示输出
 // 前置：先运行npm ls查看下当前包的版本
 $ npm ls
 xxx@1.0.4
-// 步骤一 patch+1 prerelease为alpha.0
+// 示例一 patch+1 prerelease为alpha.0
 $ npm version prerelease --preid=alpha
 v1.0.5-alpha.0
-// 步骤二 prerelease+1
+// 示例二 prerelease+1
 $ npm version prerelease
 v1.0.5-alpha.1
-// 步骤三 去掉prerelease
+// 示例三 去掉prerelease
 $ npm version patch
 v1.0.5
 ```

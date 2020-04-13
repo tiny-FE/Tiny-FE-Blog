@@ -49,6 +49,7 @@ $ npm version prerelease --preid=alpha
 ```js
 $ npm publish
 ```
+注：npm publish需要有该包的发布权限，且npm registry需为npm原地址https://registry.npmjs.org/。 切换方式可参考[nrm.md](./nrm.md)
 
 ## 后言：
 1. npm version prerelease --preid=alpha中的preid顾名思义是前置标识符的意思，可以不传，alpha.0就变成了0；也可以传beta或rc等
